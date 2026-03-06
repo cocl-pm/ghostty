@@ -543,6 +543,9 @@ struct CellTextVertexIn {
 
   // Misc properties of the glyph.
   uint8_t bools [[attribute(6)]];
+
+  // The width of the cell in grid cells (1 for narrow, 2 for wide).
+  uint8_t cell_width [[attribute(7)]];
 };
 
 struct CellTextVertexOut {
