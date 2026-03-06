@@ -3218,6 +3218,7 @@ pub fn Renderer(comptime GraphicsAPI: type) type {
                     @intCast(render.glyph.offset_x + shaper_cell.x_offset),
                     @intCast(render.glyph.offset_y + shaper_cell.y_offset),
                 },
+                .cell_width = cell.gridWidth(),
             });
         }
 
@@ -3307,6 +3308,7 @@ pub fn Renderer(comptime GraphicsAPI: type) type {
                     @intCast(render.glyph.offset_x),
                     @intCast(render.glyph.offset_y),
                 },
+                .cell_width = if (wide) 2 else 1,
             }, cursor_style);
         }
 

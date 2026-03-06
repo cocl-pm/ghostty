@@ -21,6 +21,9 @@ layout(location = 5) in uint atlas;
 // Misc glyph properties.
 layout(location = 6) in uint glyph_bools;
 
+// The width of the cell in grid cells (1 for narrow, 2 for wide).
+layout(location = 7) in uint cell_width;
+
 // Values `atlas` can take.
 const uint ATLAS_GRAYSCALE = 0u;
 const uint ATLAS_COLOR = 1u;

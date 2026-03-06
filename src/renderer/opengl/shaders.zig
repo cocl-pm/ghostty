@@ -243,6 +243,7 @@ pub const CellText = extern struct {
         is_cursor_glyph: bool = false,
         _padding: u6 = 0,
     } align(1) = .{},
+    cell_width: u8 align(1) = 1,
 
     pub const Atlas = enum(u8) {
         grayscale = 0,
